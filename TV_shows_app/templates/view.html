@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/view.css' %}">
+
+</head>
+
+<body>
+    <a class="back" href="/shows">Go Back</a>
+    <div id="wrapper">
+        <h1>TV Show {{ show.id }}</h1>
+        <h3>Title: {{ show.title }}</h3>
+        <h3>Network: {{ show.network }}</h3>
+        <h3>Release Date: {{ show.release_date }}</h3>
+        <h3>Description: {{ show.desc }}</h3>
+    </div>
+    <h4>Last Updated at {{ show.updated_at }}</h4>
+    <div class="links">
+        <a href="/shows/{{ show.id }}/edit">Edit</a> | <a href="/shows/{{ show.id }}/delete">Delete</a>
+    </div>
+</body>
+
+</html>

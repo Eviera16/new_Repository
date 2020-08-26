@@ -1,0 +1,20 @@
+body{
+    padding: 40px;
+}
+table{
+    height: 400px;
+    width: 600px;
+    border: 3px solid black;
+    margin-left: 200px;
+    overflow: scroll;
+}
+th{
+    border: 3px solid black;
+}
+td{
+    border: 3px solid black;
+}
+.new{
+    margin-left: 200px;
+    margin-top: 5px;
+}

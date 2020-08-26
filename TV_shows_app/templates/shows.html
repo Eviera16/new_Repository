@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/shows.css' %}">
+
+    </head>
+    <body>
+        <h1>All Shows</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Network</th>
+                <th>Release Date</th>
+                <th>Actions</th>
+            </tr>
+            {% for s in show %}
+            <tr>
+                <td>{{ s.id }}</td>
+                <td>{{ s.title }}</td>
+                <td>{{ s.network }}</td>
+                <td>{{ s.release_date }}</td>
+                <td><a href="shows/{{ s.id }}">Show</a> | <a href="/shows/{{ s.id }}/edit">Edit</a> | <a href="/shows/{{ s.id }}/delete">Delete</a></td>
+
+            </tr>
+            {% endfor %}
+        </table>
+        <a class="new" href="shows/new">Add a new Show</a>
+    </body>
+</html>
